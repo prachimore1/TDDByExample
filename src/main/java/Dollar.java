@@ -1,5 +1,7 @@
 package main.java;
 
+import java.util.Objects;
+
 public class Dollar {
     public int amount;
 
@@ -7,7 +9,13 @@ public class Dollar {
         this.amount = amount;
     }
 
-    public void times(int multiplier) {
-        this.amount *= multiplier;
+    public Dollar times(int multiplier) {
+        return new Dollar(this.amount * multiplier);
     }
+
+    public boolean equals(Object object) {
+        Dollar dollar = (Dollar) object;
+        return this.amount == dollar.amount;
+    }
+
 }
