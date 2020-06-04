@@ -2,12 +2,13 @@ package main.java;
 
 public class Dollar extends Money {
 
-    public Dollar(int amount) {
+    public Dollar(int amount, String currency) {
         this.amount = amount;
+        this.currency = currency;
     }
 
     public Money times(int multiplier) {
-        return new Dollar(this.amount * multiplier);
+        return Money.dollar(this.amount * multiplier);
     }
 
 }
