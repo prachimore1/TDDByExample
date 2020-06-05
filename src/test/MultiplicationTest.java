@@ -42,4 +42,5 @@ public class MultiplicationTest {
         assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
         assertFalse(new Money(10, "USD").equals(new Franc(10, "CHF")));
     }
+
 }
